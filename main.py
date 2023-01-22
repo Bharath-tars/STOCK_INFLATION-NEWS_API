@@ -16,12 +16,12 @@ day2 = dt.day - 2
 dt2 = str(dt.year) + "-" + str(str_month) + "-" + str(day2)
 
 STOCK_NAME = "TSLA"
-API_KEY_Stock = 'T3I330RY7C6Q8HQH'
+API_KEY_Stock = ''
 STOCK_ENDPOINT = "https://www.alphavantage.co/query?"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
-API_KEY_News = 'eca590761b2a4008918bc67d61a3d3c0'
-AUTH_ACCOUNT = 'ACa94fa1debd2417973488cb6c52f353e8'
-AUTH_TOKEN = 'bdf4305ffac06f2d24df9f1b0128334a'
+API_KEY_News = ''
+AUTH_ACCOUNT = ''
+AUTH_TOKEN = ''
 
 parameters_stock = {
     'symbol': STOCK_NAME,
@@ -72,8 +72,8 @@ proxy_client.session.proxies = {'https': os.environ['https_proxy']}
 client = Client(AUTH_ACCOUNT, AUTH_TOKEN, http_client=proxy_client)
 message = client.messages.create(
     body=end_message,
-    from_="+19285997896",
-    to="+918639196174"
+    from_="",
+    to=""
 )
 
 print(message.status)
